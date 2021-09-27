@@ -4,6 +4,10 @@ import numpy as np
 
 def f(t):
     return (t*t) - 20*np.sin(t) - 5
+def df(t):
+    return 2*t - 20*np.cos(t)
+def d2f(t):
+    return 2 + 20*np.sin(t)
 
 plot.build(f)
 
