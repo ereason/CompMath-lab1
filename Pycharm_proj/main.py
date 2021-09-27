@@ -3,7 +3,7 @@ import halfDivideMethod
 import NewtonsMethod
 import numpy as np
 
-ep = 0.000001
+ep = 0.001
 def f(t):
     return (t*t) - 20*np.sin(t) - 5
 def df(t):
@@ -20,8 +20,8 @@ print("Look at plot and enter section [a,b]. a < b")
 a, b = map(float, input().split())
 
 print("\u03B5 = "+str(ep))
-root = halfDivideMethod.start(f,{'left':a,'right':b},ep)
-print(root)
+root = halfDivideMethod.start(f, {'left': a, 'right': b}, ep)
+print('Half divide method: ' + str(root))
 
-root2 = NewtonsMethod.start(f,df,d2f,{'left':a,'right':b},ep)
-print(root2)
+root2 = NewtonsMethod.start(f, df, d2f, {'left': a, 'right': b}, ep)
+print('Hewton\'s method: ' + str(root2))
