@@ -4,8 +4,6 @@ import simpleIterationMethod
 import halfDivideMethod
 import numpy as np
 
-ep = 0.00001
-
 
 def f(t):
     return (t*t) - 20*np.sin(t) - 5
@@ -26,6 +24,7 @@ plot.build(d2f)
 print("Look at plot and enter section [a,b]. a < b")
 a, b = map(float, input().split())
 
+ep = 0.00001
 print("\u03B5 = "+str(ep))
 
 result1 = NewtonsMethod.start(f, df, d2f, {'left': a, 'right': b}, ep)
