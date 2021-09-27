@@ -21,7 +21,7 @@ def start(f,df,d2f,sec,ep):
         return 'Wrong sector'
 
     xn = x0-f(x0)/df(x0)
-    while np.abs(x0-xn) < ep:
+    while np.abs(x0-xn) >= ep:
         x0=xn
         xn = x0 - f(x0) / df(x0)
 

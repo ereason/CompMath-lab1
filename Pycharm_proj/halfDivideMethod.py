@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def start(f, sec, ep):  # f - f(x), section - [a,b], ep - epsilon
     a = sec['left']
     b = sec['right']
