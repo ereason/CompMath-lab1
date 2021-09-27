@@ -22,4 +22,4 @@ def start(f, sec, ep):  # f - f(x), section - [a,b], ep - epsilon
             value = f(middlePoint)
             sigValue = np.sign(value)
 
-    return middlePoint if (sec['right'] - sec['left']) > 0 else None  # if b < a - None
+    return middlePoint
